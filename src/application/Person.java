@@ -1,34 +1,31 @@
 package application;
 
 public class Person {
-	String name;
-	int age;
+	/* These instance variables are not meant to be accessed outside
+	 * the class.  They are private
+	 */
+	private String name;
+	private int age;
 
-	// setter
-	void setName(String theName) {
+	/* These four methods are meant to be accessed outside
+	 * the class, so they are public
+	 * 
+	 * Public makes it explicit that these are meant to be shared
+	 */
+	 public void setName(String theName) {
 		name = theName;
 	}
 
-	/*
-	 * Had to use theAge for the parameter name so that it does't clash with the age
-	 * instance variable. But you can use keyword this to refer to the instance
-	 * variable 
-	 * 
-	 * void setAge(int theAge) { 
-	 * age = theAge;
-	 */
-	void setAge(int age) {
+	 //public methods are ways of interfacing with the class
+	public void setAge(int age) {
 		this.age = age;
 	}
-	/* 'this' is a reference to the object itself.  For this.age
-	 * it means the age attribute of this class.
-	 */
 
-	String getName() {
+	public String getName() {
 		return name;
 	}
 
-	int getAge() {
+	public int getAge() {
 		return age;
 	}
 }
